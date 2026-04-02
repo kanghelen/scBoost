@@ -27,7 +27,7 @@ if args.gpu is not None:
     import torch
     torch.cuda.set_device(args.gpu)
 
-sys.path.insert(0, "/data/cb/helenk/scRNA-seq_Methods_Boosting/260312_ensemble_stacking/260313_claude_adata_code")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from concat_xgboost_adata import ConcatXGBoost
 from split_stratified import stratified_split
 from eval_report import build_classification_report

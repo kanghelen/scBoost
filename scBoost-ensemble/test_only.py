@@ -18,7 +18,7 @@ parser.add_argument("--out_dir", default="/data/cb/helenk/scRNA-seq_Methods_Boos
                     help="Output directory for results")
 args = parser.parse_args()
 
-sys.path.insert(0, "/data/cb/helenk/scRNA-seq_Methods_Boosting/260312_ensemble_stacking/260313_claude_adata_code")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from stacking_adata import StackingEnsemble
 from split_stratified import stratified_split
 
